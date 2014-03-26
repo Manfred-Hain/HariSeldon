@@ -1,4 +1,4 @@
-﻿<%@ Control Language="C#" AutoEventWireup="true" CodeBehind="Home.ascx.cs" Inherits="Christoc.Skins.HammerFlex.Home" %>
+﻿<%@ Control Language="C#" AutoEventWireup="false" Explicit="True" Inherits="DotNetNuke.UI.Skins.Skin" %>
 <%@ Register TagPrefix="dnn" TagName="LOGO" Src="~/Admin/Skins/Logo.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="SEARCH" Src="~/Admin/Skins/Search.ascx" %>
 <%@ Register TagPrefix="dnn" TagName="USER" Src="~/Admin/Skins/User.ascx" %>
@@ -14,48 +14,42 @@
 <dnn:META ID="mobileScale" runat="server" Name="viewport" Content="width=device-width,initial-scale=1" />
 
 <dnn:JQUERY ID="dnnjQuery" runat="server" jQueryHoverIntent="true" />
-<dnn:DnnJsInclude ID="bootstrapJS" runat="server" FilePath="js/bootstrap.min.js" PathNameAlias="SkinPath" />
-<dnn:DnnCssInclude ID="bootStrapCSS" runat="server" FilePath="css/bootstrap.css" PathNameAlias="SkinPath" Priority="14" />
-<dnn:DnnJsInclude ID="bluImpJS" runat="server" FilePath="js/jquery.blueimp-gallery.min.js" PathNameAlias="SkinPath" />
+<dnn:DnnJsInclude ID="modernizr" runat="server" FilePath="foundation/js/vendor/modernizr.js" PathNameAlias="SkinPath" Priority="101" />
+<dnn:DnnJsInclude ID="foundationJS" runat="server" FilePath="foundation/js/foundation.min.js" PathNameAlias="SkinPath" Priority="102" />
+<dnn:DnnJsInclude ID="foundationInit" runat="server" FilePath="foundation/js/foundation.init.js" PathNameAlias="SkinPath" Priority="103" ForceProvider="DnnFormBottomProvider" />
 
+<dnn:DnnCssInclude ID="foundationCSS" runat="server" FilePath="foundation/css/foundation.css" PathNameAlias="SkinPath" Priority="14" />
 
-<div class="navbar navbar-default" role="navigation">
+<div class="top-bar">
     <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <div class="navbar-brand">
-                <dnn:LOGO runat="server" id="dnnLOGO" />
-            </div>
-        </div>
-        <div class="navbar-collapse collapse">
-            <dnn:MENU MenuStyle="BootStrapNav" runat="server"></dnn:MENU>
-
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Search<b class="caret"></b></a>
-                    <ul class="dropdown-menu">
-                        <li>
-                            <div class="searchBox">
-                                <dnn:Search id="dnnSearch" runat="server" showsite="false" showweb="false" cssclass="btn btn-success btn-xs" />
-                            </div>
-                        </li>
-                    </ul>
-
-                </li>
-                <li>
-                    <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
-                </li>
-                <li>
-                    <dnn:USER ID="dnnUser" runat="server" LegacyMode="false" />
+        <nav data-topbar="">
+            <ul class="title-area">
+                <!-- Title Area -->
+                <li class="name">
+                    <dnn:LOGO runat="server" id="dnnLOGO" />
                 </li>
             </ul>
-        </div>
-        <!--/.nav-collapse -->
+            <section class="top-bar-section">
+                <dnn:MENU MenuStyle="FoundationNav" runat="server"></dnn:MENU>
+                <ul id="toolbox" class="right">
+                    <li class="has-dropdown"><a href="#" class="SearchButton">Search</a>
+                        <ul class="dropdown">
+                            <li>
+                                <div class="searchBox">
+                                    <dnn:Search id="dnnSearch" runat="server" showsite="false" showweb="false" EnableTheming="true" Submit="Search" cssclass="SearchButton button" />
+                                </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <dnn:LOGIN ID="dnnLogin" CssClass="LoginLink" runat="server" LegacyMode="false" />
+                    </li>
+                    <li>
+                        <%--<dnn:USER ID="dnnUser" runat="server" LegacyMode="false" />--%>
+                    </li>
+                </ul>
+            </section>
+        </nav>
     </div>
 </div>
 
@@ -102,18 +96,9 @@
                 <dnn:terms id="dnnTerms" runat="server" />
                 <dnn:privacy id="dnnPrivacy" runat="server" />
             </div>
-            <a href="http://www.christoc.com/projects/hammerflex">Design: HammerFlex DNN Skin by Christoc.com</a>
+            <a href="https://github.com/jbrinkman/HariSeldon">Design: HariSeldon DNN Skin by Joe Brinkman</a>
         </div>
     </div>
 </div>
 
-<!-- gallery and carousel controls, hidden by default -->
-<div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-    <div class="slides"></div>
-    <h3 class="title"></h3>
-    <a class="prev">‹</a>
-    <a class="next">›</a>
-    <a class="close">×</a>
-    <a class="play-pause"></a>
-    <ol class="indicator"></ol>
-</div>
+

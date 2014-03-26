@@ -1,32 +1,15 @@
-﻿<h3>HammerFlex</h3>
-	Christoc.com <br />
-	<a href="mailto:skins@christoc.com">skins@christoc.com</a><br />
-	<a href=http://www.christoc.com>http://www.christoc.com</a><br />
+﻿<h3>HariSeldon</h3>
+	Joe Brinkman <br />
+	<a href="mailto:joe.brinkman@live.com">joe.brinkman@live.com</a><br />
+	<a href=http://www.theaccidentalgeek.com>http://www.theaccidentalgeek.com</a><br />
 <hr/>
-	<h3>About the HammerFlex</h3>
+	<h3>About the HariSeldon Skin</h3>
 
-	<strong>Version 00.01.02</strong><br />
-	Third release of HammerFlex
-	<h4>Bug Fixes</h4>
-	<ul>
-			<li>Fixed DNNTabs display - Chris Hammond</li>
-			<li>Added new Icons for notifications and messages to become red when a message or notification is available. - Chris Hammond</li>
-			<li>Styling the Search box in the nav menu - Chris Hammond</li>
-			<li>Added new row (2 panes) in Home.ascx for User Profile pages. UserProfileLeft (col-md-2) and UserProfileContent (col-md-10) - Chris Hammond</li>
-	</ul>
-	<strong>Version 00.01.01</strong><br />
-	Second release	
-	<h4>Bug Fixes</h4>
-	<ul>
-			<li>Fix image height bounce during carousel animation - Anthony Overkamp</li>
-			<li>Fixed load order of bootstrap.css to allow portal.css overrides - Chris Hammond</li>
-			<li>Added 10px margin-top to #Content to add space between navbar/carousel and module content - Chris Hammond</li>
-			<li>Adjusted CSS to force carousel images to 100% - Chris Hammond</li>
-	</ul>
-	<strong>Version 00.01.00</strong><br />
-	Initial release of the skin using Bootstrap 3 and DNN 7.1	
+	<strong>Version 01.00.00</strong><br />
+	Initial release of the skin using Foundation 5 and DNN 7.2	
 	<h4>Bug Fixes</h4>
 	<ul>
 			<li>None, first release</li>
 	</ul>
+	<p><strong>Note:</strong> This skin is a conversion of the HammerFlex skin by Chris Hammond.  Hammerflex uses the Bootstrap framework while HariSeldon uses Foundation.</p>
 </div>

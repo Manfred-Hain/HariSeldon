@@ -1,0 +1,19 @@
+<ul class="left">
+    <li class="divider hide-for-small"></li>
+	[*>NODE]
+</ul>
+
+[>NODE]
+    <li class="[?NODE]has-dropdown[/?]">
+    [?ENABLED]
+        <a href="[=URL]">[=TEXT]</a>
+    [?ELSE]
+        <a href="#">[=TEXT]</a>
+    [/?]
+    [?NODE]
+        <ul class="dropdown">
+        [*>NODE]
+        </ul>
+    [/?]
+    </li>
+[/>]
