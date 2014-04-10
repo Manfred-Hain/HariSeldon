@@ -3,7 +3,7 @@ HariSeldon
 
 Description
 -----------
-Another free open source skin for DNN (DotNetNuke) using Foundation 5.  This is basically a Foundation version of the HammerFlex skin from https://github.com/ChrisHammond/HammerFlex
+Another free open source skin for DNN (DotNetNuke) using Foundation 5.  This is a Foundation version of the HammerFlex skin from https://github.com/ChrisHammond/HammerFlex, although it includes a number of enhancements and removes the gallery components.
 
 Installation and Customization
 ------------------------------
