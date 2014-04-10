@@ -2,7 +2,7 @@
 <%@ Register TagPrefix="dnn" TagName="TITLE" Src="~/Admin/Containers/Title.ascx" %>
 
 <div class="ContainerWrapper">
-    <div class="dnnClear">       
+    <div class="clearfix">       
         <div class="ContainerPane" runat="server" id="ContentPane"></div>
     </div>
 </div>

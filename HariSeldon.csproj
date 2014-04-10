@@ -66,35 +66,25 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="bootstrapNav\menudef.xml" />
-    <Content Include="bootstrapNav\BootStrapNav.js" />
-    <Content Include="bootstrapNav\BootStrapNav.txt" />
+    <Content Include="foundationNav\menudef.xml" />
+    <Content Include="foundationNav\FoundationNav.txt" />
     <Content Include="Containers\Blank.ascx" />
     <Content Include="Containers\Main.ascx" />
-    <Content Include="css\bootstrap-theme.css" />
-    <Content Include="css\bootstrap-theme.min.css" />
-    <Content Include="css\bootstrap.css" />
-    <Content Include="css\bootstrap.min.css" />
-    <Content Include="Edit.ascx" />
-    <Content Include="Edit.doctype.xml" />
     <Content Include="foundation\css\foundation.css" />
     <Content Include="foundation\css\foundation.min.css" />
+    <Content Include="foundation\js\foundation.js" />
     <Content Include="foundation\js\foundation.min.js" />
-    <Content Include="i\icon_message_active.png" />
-    <Content Include="i\icon_notification_active.png" />
+    <Content Include="foundation\js\foundation.topbar.js" />
+    <Content Include="foundation\js\vendor\fastclick.js" />
+    <Content Include="foundation\js\vendor\modernizr.js" />
+    <Content Include="foundation\js\vendor\placeholder.js" />
+    <Content Include="images\toolbox_icons.png" />
+    <Content Include="inc\directives.txt" />
+    <Content Include="inc\footer.txt" />
+    <Content Include="inc\navbar.txt" />
     <Content Include="foundation\js\foundation.init.js" />
     <Content Include="PopupSkin.ascx" />
-    <Content Include="Home.doctype.xml" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="img\error.png" />
-    <Content Include="img\error.svg" />
-    <Content Include="img\loading.gif" />
-    <Content Include="img\play-pause.png" />
-    <Content Include="img\play-pause.svg" />
-    <Content Include="img\video-play.png" />
-    <Content Include="img\video-play.svg" />
-    <Content Include="i\icon_message.png" />
-    <Content Include="i\icon_notification.png" />
+    <Content Include="skin.doctype.xml" />
     <Content Include="License.txt" />
     <Content Include="skin.css" />
     <Content Include="ReleaseNotes.txt" />
@@ -106,11 +96,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_LocalResources\" />
@@ -154,8 +139,8 @@
   </ProjectExtensions>
   <PropertyGroup>
     <Extension>zip</Extension>
-    <DNNFileName>HammerFlex</DNNFileName>
-    <PackageName>HammerFlex</PackageName>
+    <DNNFileName>HariSeldon</DNNFileName>
+    <PackageName>HariSeldon</PackageName>
     <MSBuildCommunityTasksPath>$(SolutionDir)\BuildScripts</MSBuildCommunityTasksPath>
   </PropertyGroup>
   <Import Project="BuildScripts\SkinPackage.Targets" />

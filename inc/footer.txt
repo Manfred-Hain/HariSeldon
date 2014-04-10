@@ -1,0 +1,16 @@
+﻿    <div id="FooterRow" class="row">
+
+        <div id="FooterRowLeft" runat="server" class="columns medium-4" />
+        <div id="FooterRowMiddle" runat="server" class="columns medium-4" />
+        <div id="FooterRowRight" runat="server" class="columns medium-4" />
+
+        <div id="FooterPane" runat="server" class="columns medium-12" />
+        <div id="CopyRightPane" class="SkinLink columns medium-12 center">
+            <div class="columns medium-12">
+                <dnn:copyright ID="dnnCopyright" runat="server" />
+                <dnn:terms id="dnnTerms" runat="server" />
+                <dnn:privacy id="dnnPrivacy" runat="server" />
+            </div>
+            <a href="https://github.com/jbrinkman/HariSeldon">Design: HariSeldon DNN Skin by Joe Brinkman</a>
+        </div>
+    </div>

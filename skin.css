@@ -13,61 +13,235 @@
     margin: 0 auto;
 }
 
-.carousel-inner > .active.left {
-    float: none;
-}
-
-.carousel-caption h1 {
-    color: #fff;
-}
-
-
 a.button, a.button:visited {
     color: #fff;
 }
 
-#toolbox .has-dropdown > a:after {
-    display:none;
+.dropShadow {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.4);
 }
 
-#toolbox .searchBox {
-    padding: 15px 15px 0 15px;
-    width: 400px;
-    background-color: white;
-    border: 1px solid #ccc;
-    white-space: nowrap;
-    box-shadow: rgba(0,0,0,0.2) 0 0 5px;
+.noPadding {
+    padding: 0;
 }
 
-    #toolbox .searchBox .searchInputContainer input {
-        top: 0;
+.pull-up {
+    position: relative;
+    top: -0.5rem;
+}
+
+
+/*------------------------------------------------*/
+/* SPRITES                                        */
+/*------------------------------------------------*/
+.hs-profile {
+    background-position-y: center;
+    background-repeat: no-repeat;
+    display: inline-block;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+    .hs-profile.small {
+        -moz-background-size: 32px 32px;
+        -o-background-size: 32px 32px;
+        -webkit-background-size: 32px 32px;
+        background-size: 32px 32px;
         height: 32px;
-        width: 335px;
+        width: 32px;
     }
 
-    #toolbox .searchBox .searchInputContainer a.dnnSearchBoxClearText {
+    .hs-profile.medium {
+        -moz-background-size: 64px 64px;
+        -o-background-size: 64px 64px;
+        -webkit-background-size: 64px 64px;
+        background-size: 64px 64px;
+        height: 64px;
+        width: 64px;
+    }
+
+    .hs-profile.large {
+        -moz-background-size: 128px 128px;
+        -o-background-size: 128px 128px;
+        -webkit-background-size: 128px 128px;
+        background-size: 128px 128px;
+        height: 128px;
+        width: 128px;
+    }
+
+.hs-sprite,
+.registerGroup .buttonGroup li a:not(.button) {
+    background-image: url("images/toolbox_icons.png") !important; background-repeat: no-repeat;
+    background-position-y: center !important;
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    overflow: hidden;
+    text-indent: -9999px;
+}
+
+.hs-search {
+    background-position-x: 0;
+}
+
+    .hs-search:Hover,
+    #toolbox .has-dropdown.hover > .hs-search {
+        background-position-x: -32px !important;
+    }
+
+.hs-user {
+    background-position-x: -64px !important;
+}
+
+    .hs-user:Hover,
+    #toolbox .has-dropdown.hover > .hs-user {
+        background-position-x: -96px !important;
+    }
+
+.hs-message,
+#dnn_dnnUser_messageLink {
+    background-position-x: -128px;
+}
+
+    .hs-message:hover,
+    #dnn_dnnUser_messageLink:hover {
+        background-position-x: -160px;
+    }
+
+.hs-notification,
+#dnn_dnnUser_notificationLink {
+    background-position-x: -192px;
+}
+
+    .hs-notification:hover,
+    #dnn_dnnUser_notificationLink:hover {
+        background-position-x: -224px;
+    }
+
+/*------------------------------------------------*/
+/* TOOLBOX                                        */
+/*------------------------------------------------*/
+
+#toolbox .has-dropdown {
+    height: 45px;
+}
+
+    #toolbox .has-dropdown > a:after {
+        display: none;
+    }
+
+    #toolbox .has-dropdown > i {
+        height: 45px;
+    }
+
+#toolbox .dropdown {
+    margin-top: -7px;
+    border: 1px solid #ccc;
+    box-shadow: rgba(0,0,0,0.2) 0 0 5px;
+    background-color: white;
+}
+
+    #toolbox .dropdown a:not(.button), #toolbox .dropdown a:not(.button):visited {
+        padding: 0;
+        background-color: transparent;
+        color: #008cba;
+        line-height: 1rem;
+    }
+
+        #toolbox .dropdown a:not(.button):hover {
+            color: #0078a0;
+            text-decoration: underline;
+        }
+
+#searchBox {
+    position: relative;
+    right: -32px;
+    padding: 15px 15px 0 15px;
+    width: 300px;
+    white-space: nowrap;
+}
+
+    #searchBox .searchInputContainer input {
+        top: 0;
+        height: 32px;
+        width: 235px;
+    }
+
+    #searchBox .searchInputContainer a.dnnSearchBoxClearText {
         top: 0 !important;
         right: 0 !important;
     }
 
-    #toolbox .searchBox .SearchButton:link, #toolbox .searchBox a.SearchButton:visited {
+    #searchBox .SearchButton:link, #searchBox a.SearchButton:visited {
         height: 32px;
         width: 32px;
         vertical-align: top;
     }
 
-#toolbox a.SearchButton:link, #toolbox a.SearchButton:visited {
-    display: inline-block;
-    height: 45px;
-    width: 32px;
-    margin: 0;
-    padding: 0;
-    background: #333 url('images/search.png') no-repeat center center;
-    text-indent: -9999px;
-    vertical-align: top;
+    #searchBox a.hs-sprite {
+        text-indent: -9999px;
+        vertical-align: top;
+    }
+
+#userBox {
+    padding: 15px;
+    width: 300px;
 }
 
+    #userBox.narrow {
+        width: 160px;
+    }
 
+    #userBox a.button {
+        font-size: .75rem;
+        padding: .5rem .75rem;
+    }
+
+        #userBox a.button:hover, #userBox a.button:focus {
+            color: #00a4e4;
+        }
+
+    #userBox a.hide {
+        display: none;
+    }
+
+    #userBox > li > div.row.header {
+        margin-bottom: .75rem;
+    }
+
+#dnn_dnnLogin_loginGroup,
+#dnn_dnnLogout_loginGroup,
+#dnn_dnnRegister_registerGroup {
+    float: right;
+}
+
+    #dnn_dnnLogin_loginGroup .LoginLink {
+        border: none;
+        cursor: pointer;
+        font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+        font-size: .75rem;
+        font-weight: normal;
+        line-height: normal;
+        margin: 0;
+        position: relative;
+        text-decoration: none;
+        text-align: center;
+        display: inline-block;
+        padding: .5rem .75rem;
+        background-color: #008cba;
+        border-color: #007095;
+        color: white;
+        -webkit-transition: background-color 300ms ease-out;
+        -moz-transition: background-color 300ms ease-out;
+        -o-transition: background-color 300ms ease-out;
+        transition: background-color 300ms ease-out;
+    }
+
+#dnn_dnnUser_registerGroup .buttonGroup li {
+    float: left;
+    display: inline-block;
+    width: inherit;
+}
 
 .searchSkinObjectPreview_group {
     display: none;
@@ -114,150 +288,6 @@ ul.dnnAdminTabNav {
     box-sizing: content-box !important; /* Opera/IE 8+ */
 }
 
-/*------------------------------------------------*/
-/* LOGIN */
-/*------------------------------------------------*/
-
-.navbar-right {
-    height: 51px;
-}
-
-    .navbar-right .registerGroup,
-    .navbar-right .registerGroup *,
-    .navbar-right .loginGroup,
-    .navbar-right .loginGroup * {
-        display: inline;
-    }
-
-    .navbar-right .registerGroup,
-    .navbar-right .loginGroup {
-        float: right;
-    }
-
-        .navbar-right .registerGroup li:first-child:hover {
-            border-left: #222;
-        }
-
-        /* Register Group Styles */
-        .navbar-right .registerGroup li {
-            float: left;
-        }
-
-        .navbar-right .registerGroup .buttonGroup {
-            margin-right: 0;
-        }
-
-        .navbar-right .registerGroup a,
-        .navbar-right .loginGroup a {
-            display: block;
-            position: relative;
-            height: 50px;
-            min-width: 12px;
-            padding: 15px 15px 0 15px;
-            vertical-align: middle;
-        }
-
-            .navbar-right .registerGroup a:hover,
-            .navbar-right .loginGroup a:hover {
-            }
-
-            .navbar-right .registerGroup a:active,
-            .navbar-right .loginGroup a:active {
-                text-shadow: 0 -1px 0 #ffffff;
-            }
-
-            .navbar-right .registerGroup a:hover,
-            .navbar-right .loginGroup a:hover {
-                text-decoration: none;
-            }
-
-            .navbar-right .registerGroup a strong,
-            .navbar-right .loginGroup a strong {
-                display: block;
-                position: absolute;
-                left: 0;
-                top: 0;
-                width: 100%;
-                overflow: hidden;
-                font-size: 0;
-                text-indent: -9999px;
-            }
-
-    .navbar-right .userMessages a,
-    .navbar-right .userNotifications a {
-        background-color: transparent;
-    }
-
-    .navbar-right .userMessages strong {
-        height: 100%;
-        background: url('i/icon_message.png') no-repeat center center;
-    }
-
-    .navbar-right .userNotifications {
-    }
-
-        .navbar-right .userNotifications strong {
-            height: 100%;
-            background: url('i/icon_notification.png') no-repeat center center;
-        }
-
-    .navbar-right .registerGroup a span {
-        display: inline-block;
-        min-width: 7px;
-        margin-right: 3px;
-        text-align: center;
-    }
-
-
-
-    .navbar-right .registerGroup .userProfileImg a {
-        min-width: 50px;
-        min-height: 50px;
-        padding: 0;
-    }
-
-    .navbar-right .registerGroup a img {
-        height: 50px;
-        width: 50px;
-    }
-
-    /* Login Group Styles */
-    .navbar-right .loginGroup {
-    }
-
-        .navbar-right .loginGroup a {
-        }
-
-    /* Number of message next to the message icon*/
-    .navbar-right .userMessages a span,
-    .navbar-right .userNotifications a span {
-        display: inline-block;
-        margin-top: 0;
-        margin-right: 0;
-        background-color: transparent;
-    }
-
-    .navbar-right .userNotifications span, .navbar-right .userMessages span {
-        height: 100%;
-        display: block;
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        overflow: hidden;
-        font-size: 0;
-        text-indent: -9999px;
-        z-index: 999;
-    }
-
-    .navbar-right .userNotifications span {
-        background: url('i/icon_notification_active.png') no-repeat center center;
-    }
-
-    .navbar-right .userMessages span {
-        background: url('i/icon_message_active.png') no-repeat center center;
-    }
-
 
 /* Content formatting */
 
@@ -280,10 +310,8 @@ a, a:visited {
         color: white;
     }
 
-.top-bar-section .dropdown li button.small, .top-bar-section .dropdown li .button.small {
-    padding-top: 0.875rem;
-    padding-right: 1.75rem;
-    padding-bottom: 0.9375rem;
-    padding-left: 1.75rem;
-    font-size: 0.8125rem;
+
+.dnnFormPopup .dnnModalCtrl .ui-dialog-titlebar-close,
+div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
+    padding: 0;
 }

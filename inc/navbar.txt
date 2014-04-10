@@ -1,0 +1,53 @@
+﻿<div class="top-bar">
+    <div class="container">
+        <nav data-topbar="">
+            <ul class="title-area">
+                <!-- Title Area -->
+                <li class="name">
+                    <dnn:LOGO runat="server" id="dnnLOGO" />
+                </li>
+            </ul>
+            <section class="top-bar-section">
+                <dnn:MENU MenuStyle="FoundationNav" runat="server"></dnn:MENU>
+                <ul id="toolbox" class="right">
+                    <li class="divider hide-for-small"></li>
+
+                    <li class="has-dropdown"><i class="hs-sprite hs-search"></i>
+                        <ul id="searchBox" class="dropdown">
+                            <li>
+                                <dnn:Search id="dnnSearch" runat="server" showsite="false" showweb="false" EnableTheming="true" Submit="Search" cssclass="hs-sprite hs-search button" />
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-dropdown">
+                        <% if (Request.IsAuthenticated) { %>
+                        <i class="hs-profile small" style="background-image: url(<%=GetProfilePic(32)%>)"></i>
+                        <% } else { %>
+                        <i class="hs-sprite hs-user"></i>
+                        <% } %>
+                        <ul id="userBox" class="<%=GetUserDropdownClass() %>">
+                            <li>
+                                <% if (Request.IsAuthenticated) { %>
+                                <div class="row header">
+                                    <div class="small-8 columns noPadding">
+                                        <%=GetProfileLink() %><br />
+                                        <%=GetEditProfileLink() %>
+                                    </div>
+                                    <div class="small-4 columns noPadding">
+                                        <span class="hs-profile medium dropShadow right" style="background-image: url(<%=GetProfilePic(64)%>)"></span>
+                                    </div>
+                                </div>
+                                <dnn:USER ID="dnnUser" CssClass="hide" runat="server" ShowAvatar="false" LegacyMode="false" />
+                                <dnn:LOGIN ID="dnnLogout" CssClass="button tiny" runat="server" LegacyMode="false" />
+                                <% } else { %>
+                                <dnn:LOGIN ID="dnnLogin" CssClass="button small" runat="server" LegacyMode="false" />
+                                <dnn:USER ID="dnnRegister" CssClass="button tiny secondary" runat="server" LegacyMode="false" />
+                                <% } %>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+        </nav>
+    </div>
+</div>

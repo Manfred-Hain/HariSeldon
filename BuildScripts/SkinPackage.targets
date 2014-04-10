@@ -21,6 +21,7 @@
 
     <ItemGroup>
       <DefaultExclude Include="**\.svn\**" />
+      <DefaultExclude Include="**\.git\**" />
       <DefaultExclude Include="**\bin\**" />
       <DefaultExclude Include="**\obj\**" />
       <DefaultExclude Include="**\Release\**" />
@@ -38,7 +39,7 @@
     </ItemGroup>
 
     <ItemGroup>
-      <InstallInclude Include="**\*.ascx" Exclude="**\Containers\*.ascx;**\MobileHome.ascx" />
+      <InstallInclude Include="**\*.ascx" />
       <InstallInclude Include="**\*.asmx" />
       <InstallInclude Include="**\*.css" Exclude="**\min\**" />
       <InstallInclude Include="**\*.html" />
@@ -48,9 +49,6 @@
       <InstallInclude Include="**\*.aspx" />
       <InstallInclude Include="**\*.js" />
       <InstallInclude Include="**\*.txt"  Exclude="**\obj\**;**\_ReSharper*\**;" />
-      <InstallInclude Include="**\i\*.*" />
-      <InstallInclude Include="**\img\*.*" />
-      <InstallInclude Include="**\fonts\*.*" />
       <InstallInclude Include="**\*.jpg" Exclude="**\containers\*.jpg" />
       <InstallInclude Include="**\*.png" Exclude="**\containers\*.png" />
     </ItemGroup>
@@ -68,9 +66,6 @@
       <SourceInclude Include="**\*.aspx" />
       <SourceInclude Include="**\*.js" />
       <SourceInclude Include="**\*.txt" Exclude="**\obj\**;**\_ReSharper*\**;" />
-      <SourceInclude Include="**\i\*.*" />
-      <SourceInclude Include="**\img\*.*" />
-      <SourceInclude Include="**\fonts\*.*" />
       <SourceInclude Include="**\*.cs" />
       <SourceInclude Include="**\*.cs.designer" />
       <SourceInclude Include="**\*.csproj" />
@@ -99,7 +94,7 @@
 
     <!-- we need all the ASCX files in the root of the package in order to properly install in DNN-->
     <ItemGroup>
-      <AscxInclude Include="**\*.ascx" Exclude="**\MobileHome.ascx" />
+      <AscxInclude Include="**\*.ascx" />
     </ItemGroup>
 
 
@@ -118,7 +113,8 @@
       <Output TaskParameter="Include" ItemName="PackageManifestFiles" />
     </CreateItem>
 
-    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <!-- The skin assembly is not needed in the current version of the skin -->
+    <!--<Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>-->
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
 
     <Copy SourceFiles="@(PackageTxtFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
@@ -146,8 +142,8 @@
     <RemoveDir Directories ="$(MSBuildProjectDirectory)\Package" />
     <RemoveDir Directories ="$(MSBuildProjectDirectory)\ResourcesZip" />
 
-
-    <Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>
+    <!-- The skin assembly is not needed in the current version of the skin -->
+    <!--<Copy SourceFiles="$(MSBuildDnnBinPath)\$(AssemblyName).dll" DestinationFolder="$(MSBuildProjectDirectory)\Package\bin"/>-->
     <Copy SourceFiles="@(PackageManifestFiles)" DestinationFolder="$(MSBuildProjectDirectory)\Package" />
 
 
