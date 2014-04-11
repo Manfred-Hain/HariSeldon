@@ -84,6 +84,12 @@
     <Content Include="inc\navbar.txt" />
     <Content Include="foundation\js\foundation.init.js" />
     <Content Include="PopupSkin.ascx" />
+    <Content Include="README.html">
+      <DependentUpon>README.md</DependentUpon>
+    </Content>
+    <Content Include="README.min.html">
+      <DependentUpon>README.html</DependentUpon>
+    </Content>
     <Content Include="skin.doctype.xml" />
     <Content Include="License.txt" />
     <Content Include="skin.css" />

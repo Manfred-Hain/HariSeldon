@@ -248,7 +248,7 @@ a.button, a.button:visited {
 }
 
 ul.dnnAdminTabNav {
-    height: 40px;
+    height: 45px;
     border-radius: 0 !important;
 }
 
@@ -269,10 +269,6 @@ ul.dnnAdminTabNav {
 .form-group .dnnLabel {
     text-align: left;
     width: auto;
-}
-
-.dnnLabel + span {
-    white-space: normal;
 }
 
 
@@ -311,7 +307,27 @@ a, a:visited {
     }
 
 
+.dnnFormItem {
+    font-size: .825rem;
+}
+
 .dnnFormPopup .dnnModalCtrl .ui-dialog-titlebar-close,
 div.ui-dialog-titlebar > .ui-dialog-titlebar-close {
+    padding: 0;
+}
+
+.dnnFileUploadScope, .dnnFileUploadScope *,
+.dnnDropDownList, .dnnDropDownList *,
+.dnnGrid, .dnnGrid * {
+    -moz-box-sizing: content-box !important;
+    -webkit-box-sizing: content-box !important;
+    box-sizing: content-box !important;
+}
+
+.RadComboBox_Default table {
+    margin: 0;
+}
+
+.RadComboBox_Default td.rcbArrowCell {
     padding: 0;
 }
